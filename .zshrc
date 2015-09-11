@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/sanna/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -83,7 +83,10 @@ alias prg="cd $HOME/Programming/"
 BASE16_SHELL="$HOME/.config/base16-shell/base16-atelierdune.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+export EDITOR="vim"
 
 # Add GHC 7.8.4 to the PATH, via http://ghcformacosx.github.io/
 export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
@@ -155,3 +158,9 @@ gupstation() {
 alias graf='git remote add $argv[1] $argv[2] && gf $argv[1]'
 alias gt='git difftool'
 alias gsu='git submodule update'
+alias pe='pacman -Ss'
+alias pq='pacman -Ssq'
+alias pi='sudo pacman -S'
+
+alias tmux="TERM=xterm-256color tmux"
+export TERM="xterm-256color"
